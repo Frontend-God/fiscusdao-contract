@@ -1,0 +1,222 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ITeller",
+  "sourceName": "contracts/interfaces/ITeller.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getReward",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_principal",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_principalPaid",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_payout",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expires",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_feo",
+          "type": "address"
+        }
+      ],
+      "name": "newBond",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "index_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "pendingFor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_indexes",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "pendingForIndexes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "pending_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "percentVestedFor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "percentVested_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_indexes",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "redeem",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        }
+      ],
+      "name": "redeemAll",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "reward",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFEReward",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        }
+      ],
+      "name": "totalPendingFor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "pending_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bonder",
+          "type": "address"
+        }
+      ],
+      "name": "updateIndexesFor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

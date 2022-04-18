@@ -1,0 +1,2902 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\BondDepository.sol": {
+      "lastModificationDate": 1647028526379,
+      "contentHash": "1c33e94042f04315c6de7ccce0d9bd4b",
+      "sourceName": "contracts/BondDepository.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeMath.sol",
+        "./libraries/FixedPoint.sol",
+        "./libraries/Address.sol",
+        "./libraries/SafeERC20.sol",
+        "./types/FiscusAccessControlled.sol",
+        "./interfaces/ITreasury.sol",
+        "./interfaces/IBondingCalculator.sol",
+        "./interfaces/ITeller.sol",
+        "./interfaces/IERC20Metadata.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "FiscusBondDepository"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\libraries\\SafeMath.sol": {
+      "lastModificationDate": 1647028526383,
+      "contentHash": "fea0040acd4e46aec779fbd645a0a227",
+      "sourceName": "contracts/libraries/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\libraries\\FixedPoint.sol": {
+      "lastModificationDate": 1647028526383,
+      "contentHash": "4084d215193451cd12184a34ba681d98",
+      "sourceName": "contracts/libraries/FixedPoint.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./FullMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "Babylonian",
+        "BitMath",
+        "FixedPoint"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\libraries\\Address.sol": {
+      "lastModificationDate": 1647028526383,
+      "contentHash": "362a9edf1e828acd94c5a863a0e09fa4",
+      "sourceName": "contracts/libraries/Address.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\libraries\\SafeERC20.sol": {
+      "lastModificationDate": 1647028526383,
+      "contentHash": "b769e94e745c74ee5a80bdc8a30999f8",
+      "sourceName": "contracts/libraries/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\types\\FiscusAccessControlled.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "386ca194ca423401f3ee86f1e56cde95",
+      "sourceName": "contracts/types/FiscusAccessControlled.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IFiscusAuthority.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "FiscusAccessControlled"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\ITreasury.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "c52dff676d48bf91e891332e3ff7f53e",
+      "sourceName": "contracts/interfaces/ITreasury.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ITreasury"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IBondingCalculator.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "87c878c766aa904a7f3c25035f85d9c9",
+      "sourceName": "contracts/interfaces/IBondingCalculator.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IBondingCalculator"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\ITeller.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "bef594d4770477f6f22b903aaa9963a4",
+      "sourceName": "contracts/interfaces/ITeller.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ITeller"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IERC20Metadata.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "528734ad3886e6f9869c33cf90d03057",
+      "sourceName": "contracts/interfaces/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\libraries\\FullMath.sol": {
+      "lastModificationDate": 1647028526383,
+      "contentHash": "09a15dd1442537791d8163a3ad6321ac",
+      "sourceName": "contracts/libraries/FullMath.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "FullMath"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IERC20.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "67dc95d1a33dcdbfc548b555c6ff6990",
+      "sourceName": "contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IFiscusAuthority.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "3970f3cf7262b1fabdf0cf94036cf7f1",
+      "sourceName": "contracts/interfaces/IFiscusAuthority.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.7.5"
+      ],
+      "artifacts": [
+        "IFiscusAuthority"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\Treasury.sol": {
+      "lastModificationDate": 1647028526385,
+      "contentHash": "f1f7bbbee880e8fbd9495d1d04b87240",
+      "sourceName": "contracts/Treasury.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeMath.sol",
+        "./libraries/SafeERC20.sol",
+        "./interfaces/IOwnable.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/IERC20Metadata.sol",
+        "./interfaces/IFISC.sol",
+        "./interfaces/IsFISC.sol",
+        "./interfaces/IBondingCalculator.sol",
+        "./interfaces/ITreasury.sol",
+        "./types/FiscusAccessControlled.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "FiscusTreasury"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IOwnable.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "5f3308533c63640151727f76fe6eee27",
+      "sourceName": "contracts/interfaces/IOwnable.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IOwnable"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IFISC.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "5e1671fc790350e928e911df420e79ee",
+      "sourceName": "contracts/interfaces/IFISC.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IFISC"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IsFISC.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "01d09863f9e2738d40f08030621260f3",
+      "sourceName": "contracts/interfaces/IsFISC.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IsFISC"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\StakingDistributor.sol": {
+      "lastModificationDate": 1647028526385,
+      "contentHash": "149bcbcd0c480eebf65c9f1c02d00024",
+      "sourceName": "contracts/StakingDistributor.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeERC20.sol",
+        "./libraries/SafeMath.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/ITreasury.sol",
+        "./interfaces/IDistributor.sol",
+        "./types/FiscusAccessControlled.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "Distributor"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IDistributor.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "97541923a00a490449d0a041d9daf867",
+      "sourceName": "contracts/interfaces/IDistributor.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IDistributor"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\Staking.sol": {
+      "lastModificationDate": 1647028526385,
+      "contentHash": "fb98da0cf0a5338aa05864064cf8ce7d",
+      "sourceName": "contracts/Staking.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeMath.sol",
+        "./libraries/SafeERC20.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/IsFISC.sol",
+        "./interfaces/IgFISC.sol",
+        "./interfaces/IDistributor.sol",
+        "./types/FiscusAccessControlled.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "FiscusStaking"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IgFISC.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "25f8678c6100602c5d66aa6740294bca",
+      "sourceName": "contracts/interfaces/IgFISC.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IgFISC"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\vesting\\Investor.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "3d5d5b935ad5d42e4cddcfeeeb5d8620",
+      "sourceName": "contracts/vesting/Investor.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/SafeMath.sol",
+        "../libraries/SafeERC20.sol",
+        "../interfaces/ITreasury.sol",
+        "../interfaces/IgFISC.sol",
+        "../interfaces/IStaking.sol",
+        "../types/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "IClaim",
+        "InvestorClaimV2"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IStaking.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "c8116ea4c668164261fe83e4640c5be0",
+      "sourceName": "contracts/interfaces/IStaking.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IStaking"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\types\\Ownable.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "5e488b8c04dafda70db3b325ca0061e1",
+      "sourceName": "contracts/types/Ownable.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IOwnable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\vesting\\Genesis.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "23189ab32dc5d89476e426b1b79d9d8c",
+      "sourceName": "contracts/vesting/Genesis.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/SafeMath.sol",
+        "../libraries/SafeERC20.sol",
+        "../interfaces/ITreasury.sol",
+        "../interfaces/IgFISC.sol",
+        "../interfaces/IStaking.sol",
+        "../types/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "GenesisClaim",
+        "IClaim"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\sFiscusERC20.sol": {
+      "lastModificationDate": 1647028526385,
+      "contentHash": "73ce295df851f9792b1faf7570781db2",
+      "sourceName": "contracts/sFiscusERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/Address.sol",
+        "./libraries/SafeMath.sol",
+        "./types/ERC20Permit.sol",
+        "./interfaces/IgFISC.sol",
+        "./interfaces/IsFISC.sol",
+        "./interfaces/IStaking.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "sFiscus"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\types\\ERC20Permit.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "ba7f41fbcb84c385274c2212235057ff",
+      "sourceName": "contracts/types/ERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC20Permit.sol",
+        "./ERC20.sol",
+        "../cryptography/EIP712.sol",
+        "../cryptography/ECDSA.sol",
+        "../libraries/Counters.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ERC20Permit"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IERC20Permit.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "2e3af0b4671622138c7f5596bf4c6401",
+      "sourceName": "contracts/interfaces/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\types\\ERC20.sol": {
+      "lastModificationDate": 1647028526385,
+      "contentHash": "30f0484a0a6dd24fecbfed9d00269f29",
+      "sourceName": "contracts/types/ERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/SafeMath.sol",
+        "../interfaces/IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\cryptography\\EIP712.sol": {
+      "lastModificationDate": 1647028526379,
+      "contentHash": "f26797f3539698831a3403ea55849a52",
+      "sourceName": "contracts/cryptography/EIP712.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "EIP712"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\cryptography\\ECDSA.sol": {
+      "lastModificationDate": 1647028526379,
+      "contentHash": "488f6d2ac352233c654ef2f64f09a36d",
+      "sourceName": "contracts/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "ECDSA"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\libraries\\Counters.sol": {
+      "lastModificationDate": 1647028526383,
+      "contentHash": "a6ffc5cc8f9c9f8510f1cbb2aa223105",
+      "sourceName": "contracts/libraries/Counters.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\migration\\FiscusTokenMigrator.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "7d1de562eae523767483cc2d785f143e",
+      "sourceName": "contracts/migration/FiscusTokenMigrator.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC20.sol",
+        "../interfaces/IsFISC.sol",
+        "../interfaces/IwsFISC.sol",
+        "../interfaces/IgFISC.sol",
+        "../interfaces/ITreasury.sol",
+        "../interfaces/IStaking.sol",
+        "../interfaces/IOwnable.sol",
+        "../interfaces/IUniswapV2Router.sol",
+        "../interfaces/IStakingV1.sol",
+        "../interfaces/ITreasuryV1.sol",
+        "../types/FiscusAccessControlled.sol",
+        "../libraries/SafeMath.sol",
+        "../libraries/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "FiscusTokenMigrator"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IwsFISC.sol": {
+      "lastModificationDate": 1647028526383,
+      "contentHash": "d4c8a1f9e2176840e34b3227833081ab",
+      "sourceName": "contracts/interfaces/IwsFISC.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IwsFISC"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IUniswapV2Router.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "555fbfa6c7be51e7025debbfcb787718",
+      "sourceName": "contracts/interfaces/IUniswapV2Router.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IUniswapV2Router"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IStakingV1.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "5605f32064c4d8d8203f70f160eed19b",
+      "sourceName": "contracts/interfaces/IStakingV1.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IStakingV1"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\ITreasuryV1.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "961038e04457080e8aab017c83b2a573",
+      "sourceName": "contracts/interfaces/ITreasuryV1.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ITreasuryV1"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\StandardBondingCalculator.sol": {
+      "lastModificationDate": 1647028526385,
+      "contentHash": "b6aeaf5047571e8ca84d35f4d300cce8",
+      "sourceName": "contracts/StandardBondingCalculator.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeMath.sol",
+        "./libraries/FixedPoint.sol",
+        "./libraries/Address.sol",
+        "./libraries/SafeERC20.sol",
+        "./interfaces/IERC20Metadata.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/IBondingCalculator.sol",
+        "./interfaces/IUniswapV2ERC20.sol",
+        "./interfaces/IUniswapV2Pair.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "FiscusBondingCalculator"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IUniswapV2ERC20.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "9f8b74c56de7ac7482d81dabc8d01fd7",
+      "sourceName": "contracts/interfaces/IUniswapV2ERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IUniswapV2ERC20"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IUniswapV2Pair.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "092a11d4dd4859b875348e1f505bca02",
+      "sourceName": "contracts/interfaces/IUniswapV2Pair.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV2ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IUniswapV2Pair"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\testnet\\FiscFaucet.sol": {
+      "lastModificationDate": 1647028526385,
+      "contentHash": "edeafae9e054ef89e62c0351f11a0aa4",
+      "sourceName": "contracts/testnet/FiscFaucet.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC20.sol",
+        "../types/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "FiscFaucet"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\OFiscusERC20.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "f1a8a61f23bbc201d4bb2ee90cb0fad2",
+      "sourceName": "contracts/OFiscusERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeMath.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/IFISC.sol",
+        "./interfaces/IERC20Permit.sol",
+        "./types/ERC20Permit.sol",
+        "./types/FiscusAccessControlled.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "FiscusERC20Token"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\migration\\LiquidityMigrator.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "2f874968b708fc279354e1758939fa8c",
+      "sourceName": "contracts/migration/LiquidityMigrator.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC20.sol",
+        "../libraries/SafeERC20.sol",
+        "../libraries/SafeMath.sol",
+        "../interfaces/IUniswapV2Router.sol",
+        "../interfaces/IFiscusAuthority.sol",
+        "../types/FiscusAccessControlled.sol",
+        "../interfaces/ITreasury.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "IMigrator",
+        "LiquidityMigrator"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\BondTeller.sol": {
+      "lastModificationDate": 1647028526379,
+      "contentHash": "2e3d192993c72c9564be12c18a6aac93",
+      "sourceName": "contracts/BondTeller.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeMath.sol",
+        "./libraries/SafeERC20.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/ITreasury.sol",
+        "./interfaces/IStaking.sol",
+        "./interfaces/IOwnable.sol",
+        "./interfaces/IsFISC.sol",
+        "./interfaces/ITeller.sol",
+        "./types/FiscusAccessControlled.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "BondTeller"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\migration\\CrossChainMigrator.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "438feeb93bca7e6b5e1b657b332d8435",
+      "sourceName": "contracts/migration/CrossChainMigrator.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC20.sol",
+        "../interfaces/IOwnable.sol",
+        "../types/Ownable.sol",
+        "../libraries/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "CrossChainMigrator"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\FiscusAuthority.sol": {
+      "lastModificationDate": 1647028526379,
+      "contentHash": "8f3c512d1e5dfe0b2d77c9fb91467c4d",
+      "sourceName": "contracts/FiscusAuthority.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IFiscusAuthority.sol",
+        "./types/FiscusAccessControlled.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "FiscusAuthority"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\governance\\gFISC.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "c191100a5396c7b1f38b72c521a910db",
+      "sourceName": "contracts/governance/gFISC.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/SafeMath.sol",
+        "../libraries/Address.sol",
+        "../interfaces/IsFISC.sol",
+        "../interfaces/IgFISC.sol",
+        "../types/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.5"
+      ],
+      "artifacts": [
+        "gFISC"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\types\\VaultOwned.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "08ed75f1a7615f941281ab942af097a5",
+      "sourceName": "contracts/types/VaultOwned.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Ownable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "VaultOwned"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\mocks\\AccessControlledMock.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "c74dc555cc226b947702369e83b231f8",
+      "sourceName": "contracts/mocks/AccessControlledMock.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../types/FiscusAccessControlled.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "AccessControlledMock"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IGovernable.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "bc6b55a76cc420e0bf13c0d3cf9d1d50",
+      "sourceName": "contracts/interfaces/IGovernable.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IGovernable"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\types\\Governable.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "475a2b2053e23dfd4734692dd0402b1c",
+      "sourceName": "contracts/types/Governable.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IGovernable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "Governable"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IGuardable.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "7b357a1f90a3be66cd80bd5c9d3053f3",
+      "sourceName": "contracts/interfaces/IGuardable.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IGuardable"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\types\\Guardable.sol": {
+      "lastModificationDate": 1647028526386,
+      "contentHash": "ce794cd55a85be8953e9cb8948908c4d",
+      "sourceName": "contracts/types/Guardable.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IGuardable.sol"
+      ],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Guardable"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IOracle.sol": {
+      "lastModificationDate": 1647028526381,
+      "contentHash": "805a8afa385952782c82bdd90472c7cb",
+      "sourceName": "contracts/interfaces/IOracle.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IOracle"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\interfaces\\IWarmup.sol": {
+      "lastModificationDate": 1647028526382,
+      "contentHash": "b435a16823834d29fa8dcf63a1393374",
+      "sourceName": "contracts/interfaces/IWarmup.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IWarmup"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\mocks\\DAI.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "4eb4f95ea926a51e7cc35bd2fa6bc440",
+      "sourceName": "contracts/mocks/DAI.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "DAI",
+        "IDAI",
+        "LibNote"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\mocks\\Frax.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "451e3c1300a6992f37827a367ed5006a",
+      "sourceName": "contracts/mocks/Frax.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "FRAX",
+        "IFRAX",
+        "LibNote"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\OLD\\OLDwsFISC.sol": {
+      "lastModificationDate": 1647028526384,
+      "contentHash": "50eb3f5a9728de7d45808c1379b13bac",
+      "sourceName": "contracts/OLD/OLDwsFISC.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "ERC20",
+        "IERC20",
+        "IsFISCOLD",
+        "SafeERC20",
+        "SafeMath",
+        "wFISC"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\governance\\GovernorAlpha.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "045414536ba69f04c4a49501061abd29",
+      "sourceName": "contracts/governance/GovernorAlpha.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "GovernorAlpha",
+        "TimelockInterface",
+        "gFISCInterface",
+        "sFISCInterface"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\governance\\GovernorFISCegaDelegate.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "6b4d27881d3abd1f404d4d42c091e241",
+      "sourceName": "contracts/governance/GovernorFISCegaDelegate.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./GovernorFISCegaInterfaces.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "GovernorFISCegaDelegate"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\governance\\GovernorFISCegaInterfaces.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "d91fd5bf70829c5a4ffaf2b0cd599b3c",
+      "sourceName": "contracts/governance/GovernorFISCegaInterfaces.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "GovernorAlpha",
+        "GovernorFISCegaDelegateStorageV1",
+        "GovernorFISCegaDelegatorStorage",
+        "GovernorFISCegaEvents",
+        "TimelockInterface",
+        "gFISCInterface",
+        "sFISCInterface"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\governance\\GovernorFISCegaDelegator.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "a419f3454aae787721991b373db04f38",
+      "sourceName": "contracts/governance/GovernorFISCegaDelegator.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./GovernorFISCegaInterfaces.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "GovernorFISCegaDelegator"
+      ]
+    },
+    "C:\\mssassi\\TopTal\\projects\\fiscus\\FiscusDAO\\contracts\\governance\\Timelock.sol": {
+      "lastModificationDate": 1647028526380,
+      "contentHash": "127ee53d90fa9f0df529e9c67f205a18",
+      "sourceName": "contracts/governance/Timelock.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "SafeMath",
+        "Timelock"
+      ]
+    }
+  }
+}

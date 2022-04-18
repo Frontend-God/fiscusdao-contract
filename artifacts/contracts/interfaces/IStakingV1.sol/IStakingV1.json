@@ -1,0 +1,42 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IStakingV1",
+  "sourceName": "contracts/interfaces/IStakingV1.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "index",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_trigger",
+          "type": "bool"
+        }
+      ],
+      "name": "unstake",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

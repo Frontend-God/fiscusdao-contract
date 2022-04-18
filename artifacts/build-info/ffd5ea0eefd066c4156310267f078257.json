@@ -1,0 +1,233 @@
+{
+  "id": "ffd5ea0eefd066c4156310267f078257",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.7.5",
+  "solcLongVersion": "0.7.5+commit.eb77ed08",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/interfaces/IWarmup.sol": {
+        "content": "// SPDX-License-Identifier: AGPL-3.0\npragma solidity >=0.7.5;\n\ninterface IWarmup {\n    function retrieve( address staker_, uint amount_ ) external;\n}\n"
+      }
+    },
+    "settings": {
+      "metadata": {
+        "bytecodeHash": "none",
+        "useLiteralContent": true
+      },
+      "optimizer": {
+        "enabled": true,
+        "runs": 800
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata",
+            "devdoc",
+            "userdoc",
+            "storageLayout",
+            "evm.gasEstimates"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "contracts": {
+      "contracts/interfaces/IWarmup.sol": {
+        "IWarmup": {
+          "abi": [
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "staker_",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount_",
+                  "type": "uint256"
+                }
+              ],
+              "name": "retrieve",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            }
+          ],
+          "devdoc": {
+            "kind": "dev",
+            "methods": {},
+            "version": 1
+          },
+          "evm": {
+            "bytecode": {
+              "generatedSources": [],
+              "linkReferences": {},
+              "object": "",
+              "opcodes": "",
+              "sourceMap": ""
+            },
+            "deployedBytecode": {
+              "generatedSources": [],
+              "immutableReferences": {},
+              "linkReferences": {},
+              "object": "",
+              "opcodes": "",
+              "sourceMap": ""
+            },
+            "gasEstimates": null,
+            "methodIdentifiers": {
+              "retrieve(address,uint256)": "c3a2a665"
+            }
+          },
+          "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"staker_\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"}],\"name\":\"retrieve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IWarmup.sol\":\"IWarmup\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/interfaces/IWarmup.sol\":{\"content\":\"// SPDX-License-Identifier: AGPL-3.0\\npragma solidity >=0.7.5;\\n\\ninterface IWarmup {\\n    function retrieve( address staker_, uint amount_ ) external;\\n}\\n\",\"keccak256\":\"0x6420b9921355db6502b9b4002a5ff05a20d5b0d31306781546c9bc7a883d47d9\",\"license\":\"AGPL-3.0\"}},\"version\":1}",
+          "storageLayout": {
+            "storage": [],
+            "types": null
+          },
+          "userdoc": {
+            "kind": "user",
+            "methods": {},
+            "version": 1
+          }
+        }
+      }
+    },
+    "sources": {
+      "contracts/interfaces/IWarmup.sol": {
+        "ast": {
+          "absolutePath": "contracts/interfaces/IWarmup.sol",
+          "exportedSymbols": {
+            "IWarmup": [
+              9
+            ]
+          },
+          "id": 10,
+          "license": "AGPL-3.0",
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                ">=",
+                "0.7",
+                ".5"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "37:24:0"
+            },
+            {
+              "abstract": false,
+              "baseContracts": [],
+              "contractDependencies": [],
+              "contractKind": "interface",
+              "fullyImplemented": false,
+              "id": 9,
+              "linearizedBaseContracts": [
+                9
+              ],
+              "name": "IWarmup",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "functionSelector": "c3a2a665",
+                  "id": 8,
+                  "implemented": false,
+                  "kind": "function",
+                  "modifiers": [],
+                  "name": "retrieve",
+                  "nodeType": "FunctionDefinition",
+                  "parameters": {
+                    "id": 6,
+                    "nodeType": "ParameterList",
+                    "parameters": [
+                      {
+                        "constant": false,
+                        "id": 3,
+                        "mutability": "mutable",
+                        "name": "staker_",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 8,
+                        "src": "106:15:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "typeName": {
+                          "id": 2,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "106:7:0",
+                          "stateMutability": "nonpayable",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "visibility": "internal"
+                      },
+                      {
+                        "constant": false,
+                        "id": 5,
+                        "mutability": "mutable",
+                        "name": "amount_",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 8,
+                        "src": "123:12:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 4,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "123:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "src": "104:33:0"
+                  },
+                  "returnParameters": {
+                    "id": 7,
+                    "nodeType": "ParameterList",
+                    "parameters": [],
+                    "src": "146:0:0"
+                  },
+                  "scope": 9,
+                  "src": "87:60:0",
+                  "stateMutability": "nonpayable",
+                  "virtual": false,
+                  "visibility": "external"
+                }
+              ],
+              "scope": 10,
+              "src": "63:86:0"
+            }
+          ],
+          "src": "37:113:0"
+        },
+        "id": 0
+      }
+    }
+  }
+}
